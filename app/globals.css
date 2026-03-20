@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* === PRIMARY — Deep Indigo === */
+  --color-primary-50:  #EEF2FF;
+  --color-primary-100: #E0E7FF;
+  --color-primary-200: #C7D2FE;
+  --color-primary-500: #6366F1;
+  --color-primary-600: #4F46E5;
+  --color-primary-700: #4338CA;
+  --color-primary-800: #3730A3;
+  --color-primary-900: #312E81;
+
+  /* === ACCENT — Emerald === */
+  --color-accent-300: #6EE7B7;
+  --color-accent-400: #34D399;
+  --color-accent-500: #10B981;
+  --color-accent-600: #059669;
+
+  /* === NEUTRAL === */
+  --color-gray-50:  #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
+
+  /* === SEMANTIC === */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-danger:  #EF4444;
+  --color-info:    #3B82F6;
+
+  /* === DARK BACKGROUNDS === */
+  --bg-dark-base:    #0F172A;
+  --bg-dark-surface: #1E293B;
+  --bg-dark-card:    #1E293B;
+  --bg-dark-border:  rgba(255,255,255,0.08);
+
+  /* === SCORE COLORS === */
+  --score-critical: #EF4444;
+  --score-warning:  #F59E0B;
+  --score-good:     #3B82F6;
+  --score-excellent:#10B981;
+}
+
+* { font-family: var(--font-body); }
+h1, h2, h3 { font-family: var(--font-display); }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  background: white;
+  color: #111827;
+}
+
+/* Input zoom prevention iOS */
+input, select, textarea {
+  font-size: 16px !important; /* iOS Safari won't zoom if >= 16px */
+}
+
+/* Touch tap highlight removal */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Cross-browser fixes */
+.sticky-bottom {
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  bottom: 0;
+}
+
+.backdrop-blur {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* Scrollable area without scrollbar visible */
+.scroll-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Extra safe spacing for iPhone notch bottom */
+/* You still need to use env(safe-area-inset-bottom) in your components where required. */
+
